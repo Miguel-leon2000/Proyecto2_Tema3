@@ -21,10 +21,10 @@ public class Cliente {
             
             Vector<String> parametros = new Vector<String>();
             
-            JOptionPane.showMessageDialog(null, "El cliente se ha concetado");
+            JOptionPane.showMessageDialog(null, "El cliente se ha conectado");
             
             while(true) {
-                String menu = JOptionPane.showInputDialog(null, "Suam de 2 numeros"
+                String menu = JOptionPane.showInputDialog(null, "Suma de 2 numeros\n"
                 + "1.- Sumar\n"
                 + "2.- Salir\n", "Cliente Servidor RPC", JOptionPane.DEFAULT_OPTION);
                 
