@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rpc_servidor_cliente;
+
+import javax.swing.JOptionPane;
+import org.apache.xmlrpc.WebServer;
 
 /**
  *
@@ -11,11 +9,22 @@ package rpc_servidor_cliente;
  */
 public class Servidor {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            JOptionPane.showMessageDialog(null, "Iniciando el Servidor");
+            
+            WebServer server = new WebServer(8080);
+            
+            Suma suma = new Suma();
+            
+            server.addHandler("miServidorRPC", suma);
+            
+            server.start();
+            
+            JOptionPane.showMessageDialog(null, "Servidor en linea");
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+        }
     }
     
 }
