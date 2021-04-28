@@ -9,7 +9,12 @@ import java.rmi.server.UnicastRemoteObject;
  */
 public class Rmi extends UnicastRemoteObject implements Suma{
     
-    public Rmi() throws RemoteException()
+    /**
+     *
+     * @throws RemoteException
+     */
+    
+    public Rmi() throws RemoteException{}
 
     @Override
     public String suma(String a, String b) throws RemoteException {

@@ -15,12 +15,12 @@ public class Cliente {
         String x = "", y = "";
         
         try {
-            Suma s = (Suma) Naming.lookup("//192.168.1.12/Suma"); /*Dirección de otra computadora que vamos a conectar*/
+            Suma s = (Suma) Naming.lookup("//192.168.1.65/Suma"); /*Dirección de otra computadora que vamos a conectar*/
             
             while(true) {
                 String menu = JOptionPane.showInputDialog(null, "Suma de 2 numeros\n"
                 + "1.- Sumar\n"
-                + "2.- Salir\n", "Cliente Servidor RPC", JOptionPane.DEFAULT_OPTION);
+                + "2.- Salir\n", "Cliente Servidor RMI", JOptionPane.DEFAULT_OPTION);
                 
                 switch(menu){
                     case "1":
