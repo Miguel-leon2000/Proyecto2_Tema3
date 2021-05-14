@@ -15,7 +15,7 @@ public class Cliente {
         String x = "", y = "";
         
         try {
-            Suma s = (Suma) Naming.lookup("//192.168.1.65/Suma"); /*Dirección de otra computadora que vamos a conectar*/
+            Suma s = (Suma) Naming.lookup("//85.187.158.121:1099/Suma"); /*Dirección de otra computadora que vamos a conectar*/
             
             while(true) {
                 String menu = JOptionPane.showInputDialog(null, "Suma de 2 numeros\n"
